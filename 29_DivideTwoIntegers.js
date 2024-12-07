@@ -19,3 +19,15 @@ Constraints:
 -231 <= dividend, divisor <= 231 - 1
 divisor != 0
 */
+
+/**
+ * @param {number} dividend
+ * @param {number} divisor
+ * @return {number}
+ */
+var divide = function(dividend, divisor) {
+    const result = Math.trunc(dividend/divisor)
+    const maxValue = 2 ** 31 -1
+
+    return result > maxValue ? maxValue : result
+};
